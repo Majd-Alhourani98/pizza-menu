@@ -4,10 +4,9 @@ import ReactDOM from "react-dom/client";
 function App() {
   return (
     <div>
-      <h1>Hello React</h1>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
@@ -22,13 +21,27 @@ function Pizza() {
   );
 }
 
-const x = {
-  name: "Pizza Spinaci",
-  ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
-  price: 12,
-  photoName: "pizzas/spinaci.jpg",
-  soldOut: false,
-};
+function Header() {
+  return <h1>Fast React Pizza Co.</h1>;
+}
+
+function Menu() {
+  return (
+    <main>
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </main>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>{new Date().toLocaleDateString()} We're currently open</footer>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
