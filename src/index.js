@@ -87,16 +87,16 @@ function Menu() {
   );
 }
 
-function Pizza(props) {
+function Pizza({ pizza }) {
   // if (props.pizza.soldOut) return null;
 
   return (
     <li className="pizza">
-      <img src={props.pizza.photoName} alt={props.pizza.namae} />
+      <img src={pizza.photoName} alt={pizza.namae} />
       <div>
-        <h3>{props.pizza.name}</h3>
-        <p>{props.pizza.ingredients}</p>
-        <span>{props.pizza.price}</span>
+        <h3>{pizza.name}</h3>
+        <p>{pizza.ingredients}</p>
+        <span>{pizza.price}</span>
       </div>
     </li>
   );
@@ -131,11 +131,12 @@ function Footer() {
   );
 }
 
-function Order(props) {
+function Order({ closeHour, openHour }) {
   return (
     <div className="order">
       <p>
-        We're open until {props.closeHour}:00. Come visit us or order online.
+        We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
+        online.
       </p>
       <button className="btn">Order</button>
     </div>
