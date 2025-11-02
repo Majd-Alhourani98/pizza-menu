@@ -105,23 +105,27 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
-  if (!isOpen) {
-    return (
-      <footer className="footer">
+  return (
+    <footer className="footer">
+      {isOpen ? (
+        <Order closeHour={closeHour} />
+      ) : (
         <p>
           We're happy to welcome you between {openHour}.00 and {closeHour}/00
         </p>
-      </footer>
-    );
-  }
-
-  return (
-    <footer className="footer">
-      <div className="order">
-        <p>We're open until {closeHour}.00. Come visit use or order online</p>
-        <button className="btn">Order</button>
-      </div>
+      )}
     </footer>
+  );
+}
+
+function Order(props) {
+  return (
+    <div className="order">
+      <p>
+        We're open until {props.closeHour}.00. Come visit use or order online
+      </p>
+      <button className="btn">Order</button>
+    </div>
   );
 }
 
