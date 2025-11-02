@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import "./index.css";
+
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -11,27 +13,31 @@ function App() {
   );
 }
 
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, mushrooms, and onion</p>
-    </div>
-  );
-}
-
 function Header() {
-  return <h1>Fast React Pizza Co.</h1>;
+  return (
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>;
+    </header>
+  );
 }
 
 function Menu() {
   return (
-    <div>
+    <div className="manu">
       <h2>our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
+    </div>
+  );
+}
+
+function Pizza() {
+  return (
+    <div className="pizza">
+      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
+      <h2>Pizza Spinaci</h2>
+      <p>Tomato, mozarella, mushrooms, and onion</p>
     </div>
   );
 }
@@ -49,7 +55,9 @@ function Footer() {
   //   }
 
   return (
-    <footer>{new Date().toLocaleTimeString()} We're currently open</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()} We're currently open
+    </footer>
   );
 }
 
