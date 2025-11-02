@@ -72,12 +72,14 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      {numPizzas > 0 && (
+      {numPizzas > 0 ? (
         <ul className="pizzas">
           {pizzas.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
+            <Pizza pizza={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>We're still working on our menu. Please come back later.</p>
       )}
     </main>
   );
@@ -88,7 +90,7 @@ function Pizza(props) {
     <li className="pizza">
       <img src={props.pizza.photoName} alt={props.pizza.name} />
       <div>
-        <h2>{props.pizza.name}</h2>
+        <h3>{props.pizza.name}</h3>
         <p>{props.pizza.ingredients}</p>
         <span>{props.pizza.price}</span>
       </div>
@@ -98,17 +100,21 @@ function Pizza(props) {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 1;
-  const closeHour = 7;
+  const openHour = 12;
+  const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>We're open until {closeHour}.00. Come visit use or order online</p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00
+        </p>
       )}
     </footer>
   );
