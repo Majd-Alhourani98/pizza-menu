@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+## 🍕 Pizza Menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React app for browsing a pizza menu. Built for learning and experimentation, with a clean structure and familiar tooling so you can run and modify it quickly.
 
-## Available Scripts
+### Features
+- Browse a curated list of pizzas
+- Lightweight, fast, and easy to extend
+- Zero backend dependencies (static data or mock APIs)
 
-In the project directory, you can run:
+### Tech Stack
+- **React** (Create React App)
+- **JavaScript/JSX**
+- **CSS** (vanilla or modules, depending on implementation)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js 18+ and npm 8+
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
+```bash
+npm install
+```
 
-### `npm test`
+### Development
+```bash
+npm start
+```
+Runs the app in development mode at `http://localhost:3000` with fast refresh.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Build
+```bash
+npm run build
+```
+Creates an optimized production build in the `build/` folder.
 
-### `npm run build`
+### Tests
+```bash
+npm test
+```
+Starts the test runner in watch mode (if tests are present).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
+Common CRA structure (key parts may vary by iteration):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  components/      # Reusable UI components
+  assets/          # Images, icons, styles (if any)
+  App.js           # App shell and routes
+  index.js         # Entry point
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
+Any static host works:
+- Vercel / Netlify: deploy the `build/` folder
+- GitHub Pages: use a CRA GH Pages setup
 
-### `npm run eject`
+## Acknowledgements
+This project was created as a learning exercise and was initially scaffolded with Create React App.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
